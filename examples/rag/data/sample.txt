@@ -1,0 +1,21 @@
+Amazon Bedrock is a fully managed AWS service that provides access to foundation models (FMs)
+from leading AI providers such as Anthropic, Meta, Mistral, and Amazon Titan through a single API.
+
+Bedrock allows developers to build generative AI applications without managing infrastructure.
+It supports use cases such as chatbots, text generation, summarization, and question answering.
+
+Key features of Amazon Bedrock include:
+- Access to multiple foundation models
+- Serverless inference with automatic scaling
+- Security and privacy built into AWS
+- Integration with AWS services like IAM, CloudWatch, and S3
+
+Amazon Bedrock is commonly used in Retrieval-Augmented Generation (RAG) architectures,
+where external documents are combined with foundation models to produce accurate,
+context-aware responses.
+
+Typical RAG workflows involve:
+1. Ingesting documents
+2. Retrieving relevant context
+3. Augmenting prompts with retrieved data
+4. Generating responses using a foundation model
