@@ -1,5 +1,5 @@
 # AWS AI Generative
-
+![](assets/logo.png)
 
 
 ## 📌 Overview
