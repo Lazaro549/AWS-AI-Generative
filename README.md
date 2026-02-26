@@ -1,6 +1,6 @@
 # AWS AI Generative
 
-![AWS Generative AI Architecture](https://d2908q01vomqb2.cloudfront.net/f1f836cb4ea6efb2a0b1b99f41ad8b103eff4b59/2024/09/05/ML-17360-logic-flow-1.png)
+
 
 ## 📌 Overview
 
