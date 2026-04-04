@@ -71,9 +71,11 @@ A typical Generative AI flow on AWS includes:
 ---
 ## 💸 Donations
 
+If you'd like to support this project:
+
 - 🇦🇷 ARS (Argentina)  
   Alias: `lazaro.503.alaba.mp`
 
-- 🌎 USD (local transfers within Argentina only)  
+- 🌎 USD (Argentina only, local transfers)  
   Alias: `ahogada.duras.foca`
 
