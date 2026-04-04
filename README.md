@@ -67,7 +67,13 @@ A typical Generative AI flow on AWS includes:
 ├── .gitignore
 ├── LICENSE
 └── README.md
+```
+---
+## 💸 Donations
 
+- 🇦🇷 ARS (Argentina)  
+  Alias: `lazaro.503.alaba.mp`
 
-👉 [Become a Sponsor](https://github.com/sponsors/Lazaro549)
+- 🌎 USD (local transfers within Argentina only)  
+  Alias: `ahogada.duras.foca`
 
