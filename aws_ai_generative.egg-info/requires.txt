@@ -1,0 +1,8 @@
+boto3>=1.34
+
+[dev]
+ruff>=0.4
+
+[notebooks]
+jupyter>=1.0
+ipykernel>=6.0

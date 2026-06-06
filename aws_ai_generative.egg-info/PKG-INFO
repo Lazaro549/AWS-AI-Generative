@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: aws-ai-generative
+Version: 0.1.0
+Summary: Simple and practical examples of Generative AI on AWS using Amazon Bedrock
+Requires-Python: >=3.10
+License-File: LICENSE
+Requires-Dist: boto3>=1.34
+Provides-Extra: notebooks
+Requires-Dist: jupyter>=1.0; extra == "notebooks"
+Requires-Dist: ipykernel>=6.0; extra == "notebooks"
+Provides-Extra: dev
+Requires-Dist: ruff>=0.4; extra == "dev"
+Dynamic: license-file

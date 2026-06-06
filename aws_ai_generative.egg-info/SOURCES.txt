@@ -1,0 +1,8 @@
+LICENSE
+README.md
+pyproject.toml
+aws_ai_generative.egg-info/PKG-INFO
+aws_ai_generative.egg-info/SOURCES.txt
+aws_ai_generative.egg-info/dependency_links.txt
+aws_ai_generative.egg-info/requires.txt
+aws_ai_generative.egg-info/top_level.txt
