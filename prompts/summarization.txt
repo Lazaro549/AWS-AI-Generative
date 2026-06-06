@@ -1,9 +1,0 @@
-You are an expert at summarizing text.
-
-Create a clear and concise summary of the following content.
-Focus on key ideas and avoid unnecessary details.
-
-Text:
-{text}
-
-Summary:
