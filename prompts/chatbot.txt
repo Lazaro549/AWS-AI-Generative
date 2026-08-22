@@ -1,0 +1,9 @@
+You are a helpful, friendly, and professional assistant.
+
+Answer the user's questions clearly and concisely.
+If you do not know the answer, say so honestly.
+
+User:
+{user_input}
+
+Assistant:

@@ -1,0 +1,57 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+
+Description: >
+  AWS AI Generative - Serverless API with Amazon Bedrock
+
+Globals:
+  Function:
+    Runtime: python3.11
+    Timeout: 60
+    MemorySize: 512
+    Environment:
+      Variables:
+        BEDROCK_MODEL_ID: anthropic.claude-3-sonnet-20240229-v1:0
+        AWS_REGION_NAME: !Ref AWS::Region
+
+Resources:
+
+  GenerativeAIAPI:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: prod
+      Cors:
+        AllowMethods: "'POST,OPTIONS'"
+        AllowHeaders: "'Content-Type,Authorization'"
+        AllowOrigin: "'*'"
+
+  GenerativeAILambda:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: aws-ai-generative
+      CodeUri: ../src/lambda/
+      Handler: handler.lambda_handler
+      Description: Generative AI API using Amazon Bedrock
+      Policies:
+        - Statement:
+            - Effect: Allow
+              Action:
+                - bedrock:InvokeModel
+              Resource: "*"
+      Events:
+        ChatEndpoint:
+          Type: Api
+          Properties:
+            RestApiId: !Ref GenerativeAIAPI
+            Path: /chat
+            Method: POST
+
+Outputs:
+
+  ApiUrl:
+    Description: Production API endpoint
+    Value: !Sub "https://${GenerativeAIAPI}.execute-api.${AWS::Region}.amazonaws.com/prod/chat"
+
+  LambdaFunction:
+    Description: Lambda function name
+    Value: !Ref GenerativeAILambda

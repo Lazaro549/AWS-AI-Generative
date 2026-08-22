@@ -1,0 +1,62 @@
+[
+  {
+    "id": "rag-001",
+    "question": "What is Amazon Bedrock?",
+    "expected_answer": "Amazon Bedrock is a fully managed AWS service that provides access to foundation models (FMs) from leading AI providers such as Anthropic, Meta, Mistral, and Amazon Titan through a single API.",
+    "relevant_documents": ["examples/rag/data/sample.txt"]
+  },
+  {
+    "id": "rag-002",
+    "question": "Which AI providers offer foundation models through Amazon Bedrock?",
+    "expected_answer": "Anthropic, Meta, Mistral, and Amazon (Amazon Titan).",
+    "relevant_documents": ["examples/rag/data/sample.txt"]
+  },
+  {
+    "id": "rag-003",
+    "question": "What can developers do with Amazon Bedrock without managing infrastructure?",
+    "expected_answer": "Build generative AI applications.",
+    "relevant_documents": ["examples/rag/data/sample.txt"]
+  },
+  {
+    "id": "rag-004",
+    "question": "What use cases does Amazon Bedrock support?",
+    "expected_answer": "Chatbots, text generation, summarization, and question answering.",
+    "relevant_documents": ["examples/rag/data/sample.txt"]
+  },
+  {
+    "id": "rag-005",
+    "question": "What are the key features of Amazon Bedrock?",
+    "expected_answer": "Access to multiple foundation models, serverless inference with automatic scaling, security and privacy built into AWS, and integration with AWS services like IAM, CloudWatch, and S3.",
+    "relevant_documents": ["examples/rag/data/sample.txt"]
+  },
+  {
+    "id": "rag-006",
+    "question": "Does Amazon Bedrock offer serverless inference with automatic scaling?",
+    "expected_answer": "Yes, serverless inference with automatic scaling is one of Bedrock's key features.",
+    "relevant_documents": ["examples/rag/data/sample.txt"]
+  },
+  {
+    "id": "rag-007",
+    "question": "Which AWS services does Amazon Bedrock integrate with?",
+    "expected_answer": "IAM, CloudWatch, and S3.",
+    "relevant_documents": ["examples/rag/data/sample.txt"]
+  },
+  {
+    "id": "rag-008",
+    "question": "How is Amazon Bedrock commonly used in Retrieval-Augmented Generation architectures?",
+    "expected_answer": "External documents are combined with foundation models to produce accurate, context-aware responses.",
+    "relevant_documents": ["examples/rag/data/sample.txt"]
+  },
+  {
+    "id": "rag-009",
+    "question": "What are the four steps of a typical RAG workflow?",
+    "expected_answer": "1) Ingesting documents, 2) Retrieving relevant context, 3) Augmenting prompts with retrieved data, and 4) Generating responses using a foundation model.",
+    "relevant_documents": ["examples/rag/data/sample.txt"]
+  },
+  {
+    "id": "rag-010",
+    "question": "Is Amazon Bedrock limited to chatbot use cases?",
+    "expected_answer": "No. Besides chatbots, it also supports text generation, summarization, and question answering.",
+    "relevant_documents": ["examples/rag/data/sample.txt"]
+  }
+]
