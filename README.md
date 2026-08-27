@@ -17,7 +17,7 @@ objectively.
 AWS-AI-Generative/
 ├── examples/
 │   ├── chatbot/        # Minimal Bedrock chatbot (app.py)
-│   └── rag/             # Retrieval-Augmented Generation without a vector DB
+│   └── rag/             # RAG: chunking, Bedrock embeddings, local FAISS vector index
 ├── evaluation/           # Objective evaluation framework for the RAG example
 │   ├── metrics.py        # Context precision/recall, faithfulness, relevancy...
 │   ├── evaluate_retrieval.py
