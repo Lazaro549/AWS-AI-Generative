@@ -94,3 +94,13 @@ deploys it on every push to `main`, after the test suite passes.
 ## 📄 License
 
 [MIT](LICENSE)
+
+## 💸 Donations
+
+If you'd like to support this project:
+
+- 🇦🇷 ARS (Argentina)  
+  Alias: `lazaro.503.alaba.mp`
+
+- 🌎 USD (Argentina only, local transfers)  
+  Alias: `ahogada.duras.foca`
