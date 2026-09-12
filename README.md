@@ -81,6 +81,17 @@ methodology, dataset format, and how to run it.
 ```bash
 python evaluation/evaluate_retrieval.py    # no AWS access needed
 python evaluation/evaluate_generation.py   # needs Bedrock access
+python evaluation/rag_benchmark.py          # live multi-document benchmark
+```
+
+## 🏁 Live RAG benchmark
+
+`evaluation/rag_benchmark.py` is the canonical benchmark for the multi-document RAG pipeline. It compares three retrieval configurations (chunk size, overlap, and top-k) across two Amazon Bedrock models, using the same 18-question dataset. Each run measures context precision/recall, faithfulness, answer F1, end-to-end latency, success rate, token usage, and optional cost/query.
+
+The benchmark only publishes measured results from live Bedrock calls. It never turns failed calls into zeroes or invents pricing. The reproducible workflow in `.github/benchmark.yml` can run the benchmark with an AWS OIDC role stored as `AWS_BENCHMARK_ROLE_ARN` and commit the resulting JSON/Markdown report to `evaluation/reports/`.
+
+```bash
+python evaluation/rag_benchmark.py
 ```
 
 ## ☁️ Deployment

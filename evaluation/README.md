@@ -12,6 +12,28 @@ It does not modify `examples/rag/ingest.py` or `examples/rag/query.py` --
 it evaluates them exactly as they exist in this repository, run through
 their own real code paths.
 
+## 🏁 Canonical live benchmark
+
+For recruiter-facing evidence, use `rag_benchmark.py`. It evaluates the current multi-document vector RAG path under controlled retrieval configurations and model comparisons.
+
+It uses the six-document corpus under `examples/rag/data/documents/`, 18 human-written questions, three retrieval configurations, and two configurable Bedrock generation models. It measures context precision/recall, faithfulness, answer F1, end-to-end latency, success rate, real token usage when returned by Bedrock, and optional cost/query.
+
+```bash
+python evaluation/rag_benchmark.py
+```
+
+The benchmark writes `evaluation/reports/rag_benchmark_latest.json` and `evaluation/reports/RAG_BENCHMARK_RESULTS.md`. Generated reports are ignored by Git by default. `.github/benchmark.yml` can run the live benchmark with an AWS OIDC role and publish measured results when `AWS_BENCHMARK_ROLE_ARN` is configured.
+
+### Configurations
+
+| Name | Chunk size | Overlap | Top-k |
+|---|---:|---:|---:|
+| `small` | 400 | 60 | 2 |
+| `balanced` | 800 | 120 | 3 |
+| `wide` | 1200 | 180 | 4 |
+
+Override models with `BEDROCK_BENCHMARK_MODELS`. Override configurations with `RAG_BENCHMARK_CONFIGS`.
+
 ## 🧪 Evaluation methodology
 
 Retrieval and generation are evaluated **independently**, mirroring how a
@@ -55,9 +77,7 @@ A JSON array of objects:
   `examples/rag/data/`, that should ground the answer; used to score
   context precision/recall.
 
-The initial dataset has 10 questions, all grounded in
-`examples/rag/data/sample.txt` -- the only document currently in the
-repository's RAG corpus. See "Limitations" below for what that means.
+The legacy dataset has 10 questions grounded in `examples/rag/data/sample.txt`. The canonical live benchmark uses `dataset/rag_benchmark.json` with 18 questions over the six-document corpus under `examples/rag/data/documents/`.
 
 ## 📈 Metrics (`metrics.py`)
 
@@ -142,6 +162,10 @@ Unit tests never call AWS: `tests/test_evaluation_pipeline.py` mocks
 `boto3.client`, exactly like the existing `tests/test_rag.py` does.
 
 ## ⚠️ Limitations
+
+The older `evaluate_retrieval.py` / `evaluate_generation.py` scripts remain for backwards compatibility and document the original `sample.txt` evaluation path. They are not the canonical multi-document benchmark; use `rag_benchmark.py` for the current RAG system and recruiter-facing results.
+
+## Historical evaluation limitations
 
 - **Single-document corpus.** `examples/rag/data/` currently contains one
   file (`sample.txt`), and `load_documents()` always returns *every* file
