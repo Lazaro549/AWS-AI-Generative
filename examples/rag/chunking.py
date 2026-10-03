@@ -16,6 +16,12 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from typing import Any
 
+# Defaults validated by the offline retrieval benchmark (evaluation/retrieval_benchmark.py).
+# Measured on 18 questions / 6-document corpus with MockEmbeddingClient:
+#   small  (400/60/top-k=2):  precision=0.139, recall=0.250, avg_latency=0.20ms
+#   balanced (800/120/top-k=3): precision=0.278, recall=0.667, avg_latency=0.18ms  <-- best
+#   wide  (1200/180/top-k=4): precision=0.171, recall=0.556, avg_latency=0.18ms
+# balanced wins on both precision (+100%) and recall (+167%) vs small, with lower latency.
 DEFAULT_CHUNK_SIZE = 800
 DEFAULT_CHUNK_OVERLAP = 120
 

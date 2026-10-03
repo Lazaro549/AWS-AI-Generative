@@ -34,6 +34,9 @@ from embeddings import EmbeddingClient, EmbeddingError
 from ingest import load_documents_structured
 from vector_index import VectorIndex, VectorIndexError
 
+# Default validated by the offline retrieval benchmark (evaluation/retrieval_benchmark.py):
+# top_k=3 (balanced config) achieved recall=0.667 vs recall=0.250 for top_k=2 (small config)
+# on the 18-question benchmark, with no latency penalty.
 DEFAULT_TOP_K = 3
 DEFAULT_INDEX_DIRNAME = ".rag_index"
 
