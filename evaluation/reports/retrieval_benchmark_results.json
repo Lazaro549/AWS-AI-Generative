@@ -1,0 +1,854 @@
+{
+  "run_id": "20261004T044141Z",
+  "timestamp_utc": "2026-10-04T04:41:41.005056+00:00",
+  "num_questions": 18,
+  "corpus_documents": 6,
+  "embedding_note": "MockEmbeddingClient (deterministic, hash-based, non-semantic, 256-dim)",
+  "configs": {
+    "small": {
+      "chunk_size": 400,
+      "chunk_overlap": 60,
+      "top_k": 2
+    },
+    "balanced": {
+      "chunk_size": 800,
+      "chunk_overlap": 120,
+      "top_k": 3
+    },
+    "wide": {
+      "chunk_size": 1200,
+      "chunk_overlap": 180,
+      "top_k": 4
+    }
+  },
+  "summary": [
+    {
+      "config": "small",
+      "chunk_size": 400,
+      "chunk_overlap": 60,
+      "top_k": 2,
+      "chunk_count": 39,
+      "index_build_time_ms": 15.7,
+      "context_precision_mean": 0.1388888888888889,
+      "context_recall_mean": 0.25,
+      "retrieval_latency_mean_ms": 0.16,
+      "retrieval_latency_p95_ms": 0.467
+    },
+    {
+      "config": "balanced",
+      "chunk_size": 800,
+      "chunk_overlap": 120,
+      "top_k": 3,
+      "chunk_count": 21,
+      "index_build_time_ms": 12.2,
+      "context_precision_mean": 0.2777777777777778,
+      "context_recall_mean": 0.6666666666666666,
+      "retrieval_latency_mean_ms": 0.139,
+      "retrieval_latency_p95_ms": 0.241
+    },
+    {
+      "config": "wide",
+      "chunk_size": 1200,
+      "chunk_overlap": 180,
+      "top_k": 4,
+      "chunk_count": 14,
+      "index_build_time_ms": 10.8,
+      "context_precision_mean": 0.17129629629629628,
+      "context_recall_mean": 0.5555555555555556,
+      "retrieval_latency_mean_ms": 0.251,
+      "retrieval_latency_p95_ms": 0.452
+    }
+  ],
+  "results": [
+    {
+      "config": "small",
+      "chunk_size": 400,
+      "chunk_overlap": 60,
+      "top_k": 2,
+      "chunk_count": 39,
+      "index_build_time_ms": 15.7,
+      "context_precision_mean": 0.1388888888888889,
+      "context_recall_mean": 0.25,
+      "retrieval_latency_mean_ms": 0.16,
+      "retrieval_latency_p95_ms": 0.467,
+      "per_question": [
+        {
+          "id": "bench-001",
+          "retrieved_sources": [
+            "aws_sam.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_bedrock.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.467
+        },
+        {
+          "id": "bench-002",
+          "retrieved_sources": [
+            "aws_iam.md",
+            "aws_sam.md"
+          ],
+          "relevant_documents": [
+            "aws_bedrock.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.31
+        },
+        {
+          "id": "bench-003",
+          "retrieved_sources": [
+            "aws_sam.md",
+            "aws_iam.md"
+          ],
+          "relevant_documents": [
+            "aws_bedrock.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.203
+        },
+        {
+          "id": "bench-004",
+          "retrieved_sources": [
+            "aws_lambda.md",
+            "aws_sam.md"
+          ],
+          "relevant_documents": [
+            "aws_rag.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.136
+        },
+        {
+          "id": "bench-005",
+          "retrieved_sources": [
+            "aws_s3.md",
+            "aws_iam.md"
+          ],
+          "relevant_documents": [
+            "aws_rag.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.128
+        },
+        {
+          "id": "bench-006",
+          "retrieved_sources": [
+            "aws_bedrock.md",
+            "aws_s3.md"
+          ],
+          "relevant_documents": [
+            "aws_rag.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.131
+        },
+        {
+          "id": "bench-007",
+          "retrieved_sources": [
+            "aws_rag.md",
+            "aws_bedrock.md"
+          ],
+          "relevant_documents": [
+            "aws_iam.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.127
+        },
+        {
+          "id": "bench-008",
+          "retrieved_sources": [
+            "aws_bedrock.md",
+            "aws_sam.md"
+          ],
+          "relevant_documents": [
+            "aws_iam.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.133
+        },
+        {
+          "id": "bench-009",
+          "retrieved_sources": [
+            "aws_lambda.md"
+          ],
+          "relevant_documents": [
+            "aws_iam.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.124
+        },
+        {
+          "id": "bench-010",
+          "retrieved_sources": [
+            "aws_lambda.md",
+            "aws_iam.md"
+          ],
+          "relevant_documents": [
+            "aws_lambda.md"
+          ],
+          "context_precision": 0.5,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.136
+        },
+        {
+          "id": "bench-011",
+          "retrieved_sources": [
+            "aws_iam.md",
+            "aws_lambda.md"
+          ],
+          "relevant_documents": [
+            "aws_lambda.md"
+          ],
+          "context_precision": 0.5,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.125
+        },
+        {
+          "id": "bench-012",
+          "retrieved_sources": [
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_lambda.md",
+            "aws_sam.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.125
+        },
+        {
+          "id": "bench-013",
+          "retrieved_sources": [
+            "aws_s3.md",
+            "aws_sam.md"
+          ],
+          "relevant_documents": [
+            "aws_s3.md"
+          ],
+          "context_precision": 0.5,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.119
+        },
+        {
+          "id": "bench-014",
+          "retrieved_sources": [
+            "aws_s3.md",
+            "aws_iam.md"
+          ],
+          "relevant_documents": [
+            "aws_s3.md"
+          ],
+          "context_precision": 0.5,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.118
+        },
+        {
+          "id": "bench-015",
+          "retrieved_sources": [
+            "aws_rag.md",
+            "aws_bedrock.md"
+          ],
+          "relevant_documents": [
+            "aws_s3.md",
+            "aws_rag.md"
+          ],
+          "context_precision": 0.5,
+          "context_recall": 0.5,
+          "retrieval_latency_ms": 0.12
+        },
+        {
+          "id": "bench-016",
+          "retrieved_sources": [
+            "aws_s3.md",
+            "aws_bedrock.md"
+          ],
+          "relevant_documents": [
+            "aws_sam.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.124
+        },
+        {
+          "id": "bench-017",
+          "retrieved_sources": [
+            "aws_lambda.md",
+            "aws_s3.md"
+          ],
+          "relevant_documents": [
+            "aws_sam.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.117
+        },
+        {
+          "id": "bench-018",
+          "retrieved_sources": [
+            "aws_s3.md",
+            "aws_iam.md"
+          ],
+          "relevant_documents": [
+            "aws_rag.md",
+            "aws_bedrock.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.134
+        }
+      ]
+    },
+    {
+      "config": "balanced",
+      "chunk_size": 800,
+      "chunk_overlap": 120,
+      "top_k": 3,
+      "chunk_count": 21,
+      "index_build_time_ms": 12.2,
+      "context_precision_mean": 0.2777777777777778,
+      "context_recall_mean": 0.6666666666666666,
+      "retrieval_latency_mean_ms": 0.139,
+      "retrieval_latency_p95_ms": 0.241,
+      "per_question": [
+        {
+          "id": "bench-001",
+          "retrieved_sources": [
+            "aws_rag.md",
+            "aws_bedrock.md",
+            "aws_s3.md"
+          ],
+          "relevant_documents": [
+            "aws_bedrock.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.241
+        },
+        {
+          "id": "bench-002",
+          "retrieved_sources": [
+            "aws_iam.md",
+            "aws_s3.md"
+          ],
+          "relevant_documents": [
+            "aws_bedrock.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.148
+        },
+        {
+          "id": "bench-003",
+          "retrieved_sources": [
+            "aws_bedrock.md",
+            "aws_lambda.md",
+            "aws_s3.md"
+          ],
+          "relevant_documents": [
+            "aws_bedrock.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.191
+        },
+        {
+          "id": "bench-004",
+          "retrieved_sources": [
+            "aws_iam.md",
+            "aws_rag.md",
+            "aws_sam.md"
+          ],
+          "relevant_documents": [
+            "aws_rag.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.127
+        },
+        {
+          "id": "bench-005",
+          "retrieved_sources": [
+            "aws_s3.md",
+            "aws_lambda.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_rag.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.119
+        },
+        {
+          "id": "bench-006",
+          "retrieved_sources": [
+            "aws_lambda.md",
+            "aws_s3.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_rag.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.122
+        },
+        {
+          "id": "bench-007",
+          "retrieved_sources": [
+            "aws_lambda.md",
+            "aws_sam.md",
+            "aws_bedrock.md"
+          ],
+          "relevant_documents": [
+            "aws_iam.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.125
+        },
+        {
+          "id": "bench-008",
+          "retrieved_sources": [
+            "aws_s3.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_iam.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.139
+        },
+        {
+          "id": "bench-009",
+          "retrieved_sources": [
+            "aws_bedrock.md",
+            "aws_iam.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_iam.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.126
+        },
+        {
+          "id": "bench-010",
+          "retrieved_sources": [
+            "aws_sam.md",
+            "aws_lambda.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_lambda.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.121
+        },
+        {
+          "id": "bench-011",
+          "retrieved_sources": [
+            "aws_rag.md",
+            "aws_bedrock.md",
+            "aws_lambda.md"
+          ],
+          "relevant_documents": [
+            "aws_lambda.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.122
+        },
+        {
+          "id": "bench-012",
+          "retrieved_sources": [
+            "aws_bedrock.md",
+            "aws_rag.md",
+            "aws_sam.md"
+          ],
+          "relevant_documents": [
+            "aws_lambda.md",
+            "aws_sam.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 0.5,
+          "retrieval_latency_ms": 0.123
+        },
+        {
+          "id": "bench-013",
+          "retrieved_sources": [
+            "aws_iam.md",
+            "aws_s3.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_s3.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.116
+        },
+        {
+          "id": "bench-014",
+          "retrieved_sources": [
+            "aws_lambda.md",
+            "aws_s3.md"
+          ],
+          "relevant_documents": [
+            "aws_s3.md"
+          ],
+          "context_precision": 0.5,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.144
+        },
+        {
+          "id": "bench-015",
+          "retrieved_sources": [
+            "aws_s3.md",
+            "aws_lambda.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_s3.md",
+            "aws_rag.md"
+          ],
+          "context_precision": 0.6666666666666666,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.128
+        },
+        {
+          "id": "bench-016",
+          "retrieved_sources": [
+            "aws_s3.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_sam.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.165
+        },
+        {
+          "id": "bench-017",
+          "retrieved_sources": [
+            "aws_bedrock.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_sam.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.119
+        },
+        {
+          "id": "bench-018",
+          "retrieved_sources": [
+            "aws_rag.md",
+            "aws_iam.md"
+          ],
+          "relevant_documents": [
+            "aws_rag.md",
+            "aws_bedrock.md"
+          ],
+          "context_precision": 0.5,
+          "context_recall": 0.5,
+          "retrieval_latency_ms": 0.129
+        }
+      ]
+    },
+    {
+      "config": "wide",
+      "chunk_size": 1200,
+      "chunk_overlap": 180,
+      "top_k": 4,
+      "chunk_count": 14,
+      "index_build_time_ms": 10.8,
+      "context_precision_mean": 0.17129629629629628,
+      "context_recall_mean": 0.5555555555555556,
+      "retrieval_latency_mean_ms": 0.251,
+      "retrieval_latency_p95_ms": 0.452,
+      "per_question": [
+        {
+          "id": "bench-001",
+          "retrieved_sources": [
+            "aws_rag.md",
+            "aws_bedrock.md",
+            "aws_iam.md"
+          ],
+          "relevant_documents": [
+            "aws_bedrock.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.452
+        },
+        {
+          "id": "bench-002",
+          "retrieved_sources": [
+            "aws_sam.md",
+            "aws_iam.md",
+            "aws_bedrock.md",
+            "aws_lambda.md"
+          ],
+          "relevant_documents": [
+            "aws_bedrock.md"
+          ],
+          "context_precision": 0.25,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.309
+        },
+        {
+          "id": "bench-003",
+          "retrieved_sources": [
+            "aws_rag.md",
+            "aws_s3.md",
+            "aws_lambda.md"
+          ],
+          "relevant_documents": [
+            "aws_bedrock.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.31
+        },
+        {
+          "id": "bench-004",
+          "retrieved_sources": [
+            "aws_bedrock.md",
+            "aws_iam.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_rag.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.335
+        },
+        {
+          "id": "bench-005",
+          "retrieved_sources": [
+            "aws_iam.md",
+            "aws_rag.md",
+            "aws_lambda.md",
+            "aws_bedrock.md"
+          ],
+          "relevant_documents": [
+            "aws_rag.md"
+          ],
+          "context_precision": 0.25,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.294
+        },
+        {
+          "id": "bench-006",
+          "retrieved_sources": [
+            "aws_lambda.md",
+            "aws_iam.md",
+            "aws_s3.md",
+            "aws_sam.md"
+          ],
+          "relevant_documents": [
+            "aws_rag.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.301
+        },
+        {
+          "id": "bench-007",
+          "retrieved_sources": [
+            "aws_rag.md",
+            "aws_iam.md",
+            "aws_lambda.md"
+          ],
+          "relevant_documents": [
+            "aws_iam.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.284
+        },
+        {
+          "id": "bench-008",
+          "retrieved_sources": [
+            "aws_s3.md",
+            "aws_lambda.md",
+            "aws_sam.md"
+          ],
+          "relevant_documents": [
+            "aws_iam.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.319
+        },
+        {
+          "id": "bench-009",
+          "retrieved_sources": [
+            "aws_iam.md",
+            "aws_rag.md",
+            "aws_s3.md",
+            "aws_bedrock.md"
+          ],
+          "relevant_documents": [
+            "aws_iam.md"
+          ],
+          "context_precision": 0.25,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.284
+        },
+        {
+          "id": "bench-010",
+          "retrieved_sources": [
+            "aws_rag.md",
+            "aws_bedrock.md",
+            "aws_sam.md"
+          ],
+          "relevant_documents": [
+            "aws_lambda.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.304
+        },
+        {
+          "id": "bench-011",
+          "retrieved_sources": [
+            "aws_lambda.md",
+            "aws_bedrock.md",
+            "aws_iam.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_lambda.md"
+          ],
+          "context_precision": 0.25,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.312
+        },
+        {
+          "id": "bench-012",
+          "retrieved_sources": [
+            "aws_rag.md",
+            "aws_sam.md",
+            "aws_bedrock.md"
+          ],
+          "relevant_documents": [
+            "aws_lambda.md",
+            "aws_sam.md"
+          ],
+          "context_precision": 0.3333333333333333,
+          "context_recall": 0.5,
+          "retrieval_latency_ms": 0.196
+        },
+        {
+          "id": "bench-013",
+          "retrieved_sources": [
+            "aws_iam.md",
+            "aws_sam.md",
+            "aws_lambda.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_s3.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.202
+        },
+        {
+          "id": "bench-014",
+          "retrieved_sources": [
+            "aws_s3.md",
+            "aws_bedrock.md",
+            "aws_sam.md",
+            "aws_rag.md"
+          ],
+          "relevant_documents": [
+            "aws_s3.md"
+          ],
+          "context_precision": 0.25,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.125
+        },
+        {
+          "id": "bench-015",
+          "retrieved_sources": [
+            "aws_bedrock.md",
+            "aws_rag.md",
+            "aws_iam.md",
+            "aws_lambda.md"
+          ],
+          "relevant_documents": [
+            "aws_s3.md",
+            "aws_rag.md"
+          ],
+          "context_precision": 0.25,
+          "context_recall": 0.5,
+          "retrieval_latency_ms": 0.121
+        },
+        {
+          "id": "bench-016",
+          "retrieved_sources": [
+            "aws_iam.md",
+            "aws_s3.md",
+            "aws_rag.md",
+            "aws_sam.md"
+          ],
+          "relevant_documents": [
+            "aws_sam.md"
+          ],
+          "context_precision": 0.25,
+          "context_recall": 1.0,
+          "retrieval_latency_ms": 0.123
+        },
+        {
+          "id": "bench-017",
+          "retrieved_sources": [
+            "aws_s3.md",
+            "aws_lambda.md",
+            "aws_bedrock.md"
+          ],
+          "relevant_documents": [
+            "aws_sam.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.121
+        },
+        {
+          "id": "bench-018",
+          "retrieved_sources": [
+            "aws_sam.md",
+            "aws_s3.md",
+            "aws_iam.md"
+          ],
+          "relevant_documents": [
+            "aws_rag.md",
+            "aws_bedrock.md"
+          ],
+          "context_precision": 0.0,
+          "context_recall": 0.0,
+          "retrieval_latency_ms": 0.129
+        }
+      ]
+    }
+  ]
+}

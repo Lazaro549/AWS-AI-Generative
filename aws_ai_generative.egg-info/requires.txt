@@ -1,0 +1,14 @@
+boto3>=1.34
+python-dotenv>=1.0
+
+[dev]
+ruff>=0.4
+pytest>=8.0
+
+[notebooks]
+jupyter>=1.0
+ipykernel>=6.0
+
+[rag]
+faiss-cpu>=1.8
+numpy>=1.24

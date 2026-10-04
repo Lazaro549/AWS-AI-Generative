@@ -1,6 +1,6 @@
-![AWS AI Generative](logo.png)
-
 # AWS AI Generative
+
+![AWS AI Generative](logo.png)
 
 ![Tests](https://github.com/Lazaro549/AWS-AI-Generative/actions/workflows/test.yml/badge.svg)
 ![Deploy](https://github.com/Lazaro549/AWS-AI-Generative/actions/workflows/deploy.yml/badge.svg)
@@ -137,6 +137,8 @@ Outputs: `evaluation/reports/retrieval_benchmark_results.json` and `evaluation/r
 
 ## 🏁 Live RAG benchmark
 
+![](evaluation/evidence.png)
+
 `evaluation/rag_benchmark.py` is the canonical benchmark for the multi-document RAG pipeline. It compares three retrieval configurations (chunk size, overlap, and top-k) across two Amazon Bedrock models, using the same 18-question dataset. Each run measures context precision/recall, faithfulness, answer F1, end-to-end latency, success rate, token usage, and optional cost/query.
 
 The benchmark only publishes measured results from live Bedrock calls. It never turns failed calls into zeroes or invents pricing. The reproducible workflow in `.github/benchmark.yml` can run the benchmark with an AWS OIDC role stored as `AWS_BENCHMARK_ROLE_ARN` and commit the resulting JSON/Markdown report to `evaluation/reports/`.
@@ -152,6 +154,28 @@ template that deploys the Lambda handler as a serverless API backed by
 Bedrock. The `deploy` workflow in
 [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and
 deploys it on every push to `main`, after the test suite passes.
+
+## 🔗 Cross-Project Engineering Portfolio
+
+This repository is the **experimentation layer** in a three-repo engineering portfolio:
+
+| Layer | Repository | Role |
+|-------|------------|------|
+| **Experiment** | `AWS-AI-Generative` | Build RAG systems, generate benchmark data |
+| **Measure** | `ai-evaluation-platform` | Evaluate quality, latency, cost objectively |
+| **Decide** | `ai-engineering-lab` | Compare configurations, document conclusions |
+
+**Data flow:**
+```
+AWS-AI-Generative (RAG + benchmarks)
+        ↓ produces JSON reports
+AI Evaluation Platform (evaluation pipeline)
+        ↓ evaluates & compares
+AI Engineering Lab (evidence hub)
+        ↓ presents conclusions
+```
+
+The offline retrieval benchmark results (`evaluation/reports/retrieval_benchmark_results.json`) are consumed by `ai-engineering-lab` to populate measured evidence in its benchmark explorer. The live RAG benchmark (`rag_benchmark.py`) produces results compatible with the AI Evaluation Platform's comparison API.
 
 ## 📄 License
 
