@@ -73,10 +73,14 @@ def _split_into_windows(text: str, chunk_size: int, chunk_overlap: int) -> list[
 
     if len(windows) > 1:
         last_start, last_end = windows[-1]
-        if (last_end - last_start) < MIN_CHUNK_CHARS:
+        minimum_tail_size = min(MIN_CHUNK_CHARS, chunk_size)
+        if (last_end - last_start) < minimum_tail_size:
+            # Keep every chunk within chunk_size. Rather than extending the
+            # previous window (which can exceed the configured maximum),
+            # shift the final window's start backward to make its tail useful.
             prev_start, _prev_end = windows[-2]
-            windows[-2] = (prev_start, last_end)
-            windows.pop()
+            adjusted_start = max(prev_start + 1, last_end - minimum_tail_size)
+            windows[-1] = (adjusted_start, last_end)
 
     return windows
 
